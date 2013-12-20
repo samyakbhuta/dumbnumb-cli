@@ -1,0 +1,27 @@
+{
+  "name": "dumbnumb-cli",
+  "version": "0.0.1",
+  "description": "command line client for dumbnumb",
+  "main": "dumbnumb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samyakbhuta/dumbnumb-cli.git"
+  },
+  "keywords": [
+    "dumbnumb"
+  ],
+  "author": "Samyak Bhuta",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/samyakbhuta/dumbnumb-cli/issues"
+  },
+  "dependencies": {
+    "helmsman": "~0.2.6",
+    "commander": "~2.1.0",
+    "request": "~2.30.0"
+  },
+  "devDependencies": {}
+}
