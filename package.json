@@ -20,7 +20,8 @@
   },
   "bin" : {
    "dumbnumb" : "./bin/dumbnumb.js",
-   "dumbnumb-add" : "./bin/dumbnumb-add.js"
+   "dumbnumb-add" : "./bin/dumbnumb-add.js",
+   "dumbnumb-list" : "./bin/dumbnumb-list.js"
   },
   "dependencies": {
     "helmsman": "~0.2.6",
