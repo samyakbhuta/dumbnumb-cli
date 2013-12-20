@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var program = require('commander');
-var DumbNumb = require('./lib/dumbnumb-lib');
+var DumbNumb = require('../lib/dumbnumb-lib');
 var n = new DumbNumb();
 
 exports.command = {

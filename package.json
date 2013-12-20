@@ -2,7 +2,7 @@
   "name": "dumbnumb-cli",
   "version": "0.0.1",
   "description": "command line client for dumbnumb",
-  "main": "dumbnumb.js",
+  "main": "./bin/dumbnumb.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,10 @@
   "license": "BSD",
   "bugs": {
     "url": "https://github.com/samyakbhuta/dumbnumb-cli/issues"
+  },
+  "bin" : {
+   "dumbnumb" : "./bin/dumbnumb.js",
+   "dumbnumb-add" : "./bin/dumbnumb-add.js"
   },
   "dependencies": {
     "helmsman": "~0.2.6",
