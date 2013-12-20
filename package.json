@@ -18,15 +18,17 @@
   "bugs": {
     "url": "https://github.com/samyakbhuta/dumbnumb-cli/issues"
   },
-  "bin" : {
-   "dumbnumb" : "./bin/dumbnumb.js",
-   "dumbnumb-add" : "./bin/dumbnumb-add.js",
-   "dumbnumb-list" : "./bin/dumbnumb-list.js"
+  "bin": {
+    "dumbnumb": "./bin/dumbnumb.js",
+    "dumbnumb-add": "./bin/dumbnumb-add.js",
+    "dumbnumb-list": "./bin/dumbnumb-list.js",
+    "dumbnumb-remove": "./bin/dumbnumb-remove.js"
   },
   "dependencies": {
     "helmsman": "~0.2.6",
     "commander": "~2.1.0",
-    "request": "~2.30.0"
+    "request": "~2.30.0",
+    "rc": "~0.3.2"
   },
   "devDependencies": {}
 }
