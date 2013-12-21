@@ -22,5 +22,5 @@ if (require.main === module) {
     	program.help(); // will exit as well.
     }
 
-    dumbnumb.delete(program.number);
+    dumbnumb.deleteNumber(program.number);
 }

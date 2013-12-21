@@ -29,5 +29,5 @@ if (require.main === module) {
     	program.help(); // will exit as well.
     }
 
-    dumbnumb.post(program.number);
+    dumbnumb.postNumber(program.number);
 }

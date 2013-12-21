@@ -17,5 +17,5 @@ if (require.main === module) {
     .option('-t, --table', 'If you want to display the numbers list as a pretty a table.')
     .parse(process.argv);
 
-    dumbnumb.get({number:program.number,isTable:program.table});
+    dumbnumb.getNumber({number:program.number,isTable:program.table});
 }
