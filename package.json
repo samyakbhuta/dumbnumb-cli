@@ -28,7 +28,8 @@
     "helmsman": "~0.2.6",
     "commander": "~2.1.0",
     "request": "~2.30.0",
-    "rc": "~0.3.2"
+    "rc": "~0.3.2",
+    "cli-table": "~0.2.0"
   },
   "devDependencies": {}
 }

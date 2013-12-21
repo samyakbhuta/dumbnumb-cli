@@ -14,7 +14,8 @@ if (require.main === module) {
     .option('-n, --number [number]', 'A number to be listed with all its description(s).')
     .option('-h, --host [serverhost]', 'Host server. Defaults to local.')
     .option('-p, --port [serverport]', 'Port host server is listening to. Defaults to 1729.')
+    .option('-t, --table', 'If you want to display the numbers list as a pretty a table.')
     .parse(process.argv);
 
-    dumbnumb.get(program.number);
+    dumbnumb.get({number:program.number,isTable:program.table});
 }
