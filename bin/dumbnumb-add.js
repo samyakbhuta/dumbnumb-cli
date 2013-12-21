@@ -30,5 +30,5 @@ if (require.main === module) {
     	program.help(); // will exit as well.
     }
 
-    dumbnumb.postNumber({number:program.number,isTable:program.table});
+    dumbnumb.postNumber({number:program.number,description:program.desc,isTable:program.table});
 }
