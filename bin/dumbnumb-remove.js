@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var program = require('commander');
 var DumbNumb = require('../lib/dumbnumb-lib');
-var n = new DumbNumb();
+var dumbnumb = new DumbNumb();
 
 exports.command = {
   description: 'Removes a number with all description(s)'
@@ -20,5 +20,5 @@ if (require.main === module) {
     	program.help(); // will exit as well.
     }
 
-    n.delete(program.number);
+    dumbnumb.delete(program.number);
 }

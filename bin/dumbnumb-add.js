@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var program = require('commander');
 var DumbNumb = require('../lib/dumbnumb-lib');
-var n = new DumbNumb();
+var dumbnumb = new DumbNumb();
 
 exports.command = {
   description: 'Adds a number with it\'s description(s)'
@@ -27,5 +27,5 @@ if (require.main === module) {
     	program.help(); // will exit as well.
     }
 
-    n.post(program.number); 
+    dumbnumb.post(program.number);
 }
