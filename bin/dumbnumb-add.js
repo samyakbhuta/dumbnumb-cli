@@ -13,6 +13,8 @@ if (require.main === module) {
     .version('0.0.1')
     .option('-n, --number <number>', 'A number to be added.\t\t\t\t*Required*')
     .option('-d, --desc <description>', 'Description(s) for the number to be added.\t*Required*')
+    .option('-h, --host [serverhost]', 'Host server. Defaults to local.')
+    .option('-p, --port [serverport]', 'Port host server is listening to. Defaults to 1729.')
     .parse(process.argv);
 
     if (!program.number) {

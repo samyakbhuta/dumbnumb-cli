@@ -12,6 +12,8 @@ if (require.main === module) {
     program
     .version('0.0.1')
     .option('-n, --number <number>', 'A number to be deleted with all its description(s).')
+    .option('-h, --host [serverhost]', 'Host server. Defaults to local.')
+    .option('-p, --port [serverport]', 'Port host server is listening to. Defaults to 1729.')
     .parse(process.argv);
 
     if (!program.number) {
