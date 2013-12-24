@@ -15,7 +15,7 @@ if (require.main === module) {
     .option('-d, --desc <description>', 'Description(s) for the number to be added.\t*Required*')
     .option('-h, --host [serverhost]', 'Host server. Defaults to local.')
     .option('-p, --port [serverport]', 'Port host server is listening to. Defaults to 1729.')
-    .option('-t, --table', 'If you want to display the numbers list as a pretty a table.')
+    .option('-t, --table', 'If you want to display the numbers list as a pretty table.')
     .parse(process.argv);
 
     if (!program.number) {
