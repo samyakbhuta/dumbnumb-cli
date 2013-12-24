@@ -11,13 +11,13 @@ if (require.main === module) {
 
     program
     .version('0.0.1')
-    .option('-n, --number [number]', 'A number to be listed with all its description(s).')
+    .option('-i, --id [number_id]', 'An id of a number to be listed with all its description(s).')
     .option('-h, --host [serverhost]', 'Host server. Defaults to local.')
     .option('-p, --port [serverport]', 'Port host server is listening to. Defaults to 1729.')
     .option('-t, --table', 'If you want to display the numbers list as a pretty table.')
     .parse(process.argv);
 
-    var options = {number:program.number,isTable:program.table};
+    var options = {id:program.id,isTable:program.table};
     dumbnumb.getNumber(options, function (error, response, body) {
 	  // Display both error and body.
 	  if (!error && (response.statusCode == 200 || response.statusCode == 201 )) {

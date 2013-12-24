@@ -11,18 +11,18 @@ if (require.main === module) {
 
     program
     .version('0.0.1')
-    .option('-n, --number <number>', 'A number to be deleted with all its description(s).')
+    .option('-i, --id <number_id>', 'An id of a number to be deleted with all its description(s).')
     .option('-h, --host [serverhost]', 'Host server. Defaults to local.')
     .option('-p, --port [serverport]', 'Port host server is listening to. Defaults to 1729.')
     .parse(process.argv);
 
-    if (!program.number) {
+    if (!program.id) {
         console.log('');
-        console.log('  Oops ! Number is required.');
+        console.log('  Oops ! Number id is required.');
     	program.help(); // will exit as well.
     }
 
-    var options = {number:program.number};
+    var options = {id:program.id};
     dumbnumb.deleteNumber(options, function (error, response, body) {
         if (!error && response.statusCode == 204){
             console.log('Removed !');
