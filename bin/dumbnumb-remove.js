@@ -22,5 +22,18 @@ if (require.main === module) {
     	program.help(); // will exit as well.
     }
 
-    dumbnumb.deleteNumber(program.number);
+    var options = {number:program.number};
+    dumbnumb.deleteNumber(options, function (error, response, body) {
+        if (!error && response.statusCode == 204){
+            console.log('Removed !');
+        } else {
+            if (!error) {
+                // TODO : Display meaninful message and not just status code.
+                console.log('Could not remove. HTTP Response Code : ' + response.statusCode );
+            } else {
+                // TODO : Display meaninful message instead of error dump.
+                console.log(error);
+            }
+        }
+    });
 }

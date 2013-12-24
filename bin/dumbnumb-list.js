@@ -17,5 +17,25 @@ if (require.main === module) {
     .option('-t, --table', 'If you want to display the numbers list as a pretty table.')
     .parse(process.argv);
 
-    dumbnumb.getNumber({number:program.number,isTable:program.table});
+    var options = {number:program.number,isTable:program.table};
+    dumbnumb.getNumber(options, function (error, response, body) {
+	  // Display both error and body.
+	  if (!error && (response.statusCode == 200 || response.statusCode == 201 )) {
+	    if (options.isTable) {
+	        // Display as pretty table.
+	        dumbnumb.displayNumbers(body);
+	    } else {
+	        // Just display as JSON.
+	        console.log(body);
+	    }
+	  } else {
+		if (!error) {
+			// TODO : Display meaninful message and not just status code.
+			console.log('Could not list. HTTP Response Code : ' + response.statusCode );
+		} else {
+		    // TODO : Display meaninful message instead of error dump.
+		    console.log(error);
+		}
+	  }
+    });
 }
